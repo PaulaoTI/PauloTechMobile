@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logoredonda.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Paulo Tech - Tela Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(121, 44, 245);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            background-color: transparent;
+            border: transparent;
+        }
+        
+        button {
+            display: block; 
+            background-color: rgb(66, 66, 66);
+            font-size: 17px; 
+            padding: 15px 10px;
+            border: none; 
+            border-radius: 4px;
+            color: white; 
+            cursor: pointer; 
+            width: 200px; 
+            margin-bottom: 10px; 
+            text-align: center;
+        }        
+        
+        button:hover {
+            background-color: rgb(129, 129, 129);
+            color: white; 
+        }
+        a {
+            text-decoration: none;
+        }
+
+        .menu {
+            cursor: pointer;
+            height: 40px;
+            width: 50px;
+            background-color: rgb(34, 34, 34);
+            border-radius: 5px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 9px;
+            position: fixed;
+            left: 45%; 
+            top: 20px;
+            transform: translateX(-50%);
+            z-index: 2000;
+        }
+        
+        .menu-icon {
+            font-size: 24px;
+        }
+        
+        .tooltip {
+            visibility: hidden;
+            height: 40px;
+            width: 100px;
+            background-color: rgb(43, 43, 43);
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 15px;
+            left: 195%; 
+            transform: translateX(-50%); 
+            z-index: 1500; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu" id="menuToggle">
+        <div class="menu-icon" id="icon">⫶☰</div>
+        <div class="tooltip" id="tooltip">Menu</div>
+    </div>
+    <div>
+        <a href="InteligenciaArtificial.html">
+            <button class="Bt1">Inteligência artificial</button>
+        </a>
+        <a href="informatica.html">
+            <button class="Bt2">Informática</button>
+        </a>
+        <a href="programacao.html">
+            <button class="Bt3">Programação</button>
+        </a>
+        <a href="redes.html">
+            <button class="Bt4">Redes</button>
+        </a>
+        <a href="segurancaDaInformacao.html">
+            <button class="Bt5">Seg. Info</button>
+        </a>
+        <a href="bancoDeDados.html">
+            <button class="Bt6">Banco de dados</button>
+        </a>
+        <a href="cursos.html">
+            <button class="Bt7">Cursos Gratuitos</button>
+        </a>
+        <!-- 
+        <h1 class="presente" id="mensagem">🎁</h1>
+        <div class="tooltip2" id="tooltip2">Desejo a voce um feliz natal! 🎄🎁</div>
+        -->
+    </div>
+     
+    <!--
+    <div class="sidebar" id="sidebar">
+        <a href="" id="profileLink">Meu perfil</a>
+        <div class="profile-submenu" id="profileSubmenu">
+            <label>Nome</label>
+            <p id="profileName"></p>
+            <hr>
+            <label>Telefone</label>
+            <p id="profilePhone"></p>
+            <hr>
+            <label>Email</label>
+            <p id="profileEmail"></p>
+            <hr>
+            <button id="editButton">Editar</button>
+        </div>
+        <a href="sobreMim.html">Sobre nós</a>
+        <a href="cadastro.html">Sair</a>
+    </div>
+    <div class="main-content">
+        <div class="banner">
+            <h2>Bem-vindo ao Paulo Tech!</h2>
+            <p>Explore o melhor conteúdo sobre Tecnologia, Programação e Segurança da Informação.</p>
+        </div>
+
+        <div class="content-cards">
+            <div class="card">
+                <h3>Big Data</h3>
+                <p>Descubra como grandes volumes de dados estão moldando o futuro.</p>
+                <a href="bigData.html" class="btn">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <h3>Mercado de TI</h3>
+                <p>Aprenda mais e se prepare para o mercado de trabalho da area de TI.</p>
+                <a href="mercadoDeTI.html" class="btn">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <h3>Data centers</h3>
+                <p>Explore a infraestrutura que suporta a tecnologia moderna e continuidade dos serviços.</p>
+                <a href="dataCenters.html" class="btn">Saiba Mais</a>
+            </div>
+        </div>
+    </div>
+  -->
+    <script>
+        const icon = document.getElementById('icon');
+        const tooltip = document.getElementById('tooltip');
+
+        icon.addEventListener('mouseenter', () => {
+            tooltip.style.visibility = 'visible';
+            tooltip.style.opacity = '1';
+        });
+
+        icon.addEventListener('mouseleave', () => {
+            tooltip.style.visibility = 'hidden';
+            tooltip.style.opacity = '0';
+        });
+    </script>
+    <script>
+        const mensagemNatal = document.getElementById('mensagem');
+        const tooltip2 = document.getElementById('tooltip2');
+
+        mensagem.addEventListener('mouseenter', () => {
+            tooltip2.style.visibility = 'visible';
+            tooltip2.style.opacity = '1';
+        });
+
+        mensagem.addEventListener('mouseleave', () => {
+            tooltip2.style.visibility = 'hidden';
+            tooltip2.style.opacity = '0';
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nome = localStorage.getItem('nome');
+            const telefone = localStorage.getItem('telefone');
+            const email = localStorage.getItem('email');
+
+            if (nome && telefone && email) {
+                document.getElementById('profileName').textContent = `${nome}`;
+                document.getElementById('profilePhone').textContent = `${telefone}`;
+                document.getElementById('profileEmail').textContent = `${email}`;
+            } else {
+                document.getElementById('profileName').textContent = 'Nenhum nome encontrado';
+                document.getElementById('profilePhone').textContent = 'Nenhum telefone encontrado';
+                document.getElementById('profileEmail').textContent = 'Nenhum email encontrado';
+            }
+
+            const editButton = document.getElementById('editButton');
+            editButton.addEventListener('click', function () {
+                window.location.href = 'editar.html';
+            });
+        });
+    </script>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const profileLink = document.getElementById('profileLink');
+        const profileSubmenu = document.getElementById('profileSubmenu');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        profileLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            profileSubmenu.style.display = profileSubmenu.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+</body>
+
+</html>
