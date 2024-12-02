@@ -39,7 +39,7 @@
         }        
         
         button:hover {
-            background-color: rgb(129, 129, 129);
+            background-color: rgb(44, 44, 44);
             color: white; 
         }
         a {
@@ -50,7 +50,7 @@
             cursor: pointer;
             height: 40px;
             width: 50px;
-            background-color: rgb(34, 34, 34);
+            background-color: rgb(66, 66, 66);
             border-radius: 5px;
             color: white;
             display: flex;
@@ -59,30 +59,17 @@
             justify-content: center;
             padding: 9px;
             position: fixed;
-            left: 45%; 
+            left: 35%; 
             top: 20px;
             transform: translateX(-50%);
             z-index: 2000;
         }
         
+        .menu:hover {
+            background-color: rgb(44, 44, 44);
+        }
         .menu-icon {
             font-size: 24px;
-        }
-        
-        .tooltip {
-            visibility: hidden;
-            height: 40px;
-            width: 100px;
-            background-color: rgb(43, 43, 43);
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            top: 15px;
-            left: 195%; 
-            transform: translateX(-50%); 
-            z-index: 1500; 
         }
     </style>
 </head>
@@ -90,7 +77,6 @@
 <body>
     <div class="menu" id="menuToggle">
         <div class="menu-icon" id="icon">⫶☰</div>
-        <div class="tooltip" id="tooltip">Menu</div>
     </div>
     <div>
         <a href="InteligenciaArtificial.html">
@@ -165,7 +151,6 @@
   -->
     <script>
         const icon = document.getElementById('icon');
-        const tooltip = document.getElementById('tooltip');
 
         icon.addEventListener('mouseenter', () => {
             tooltip.style.visibility = 'visible';
