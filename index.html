@@ -151,6 +151,50 @@
             text-align: center;
             color: white;
         }
+
+        .content-cards {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+            position: absolute;
+            left: 150px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            width: 200px;
+            padding: 30px;
+            background-color: rgb(34, 34, 34);
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card p {
+            font-size: 17px;
+        }
+
+        .card .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            color: white;
+            background-color: rgb(56, 56, 56);
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .card .btn:hover {
+            transform: scale(1.2, 1.2);
+            background-color: rgb(80, 80, 80);
+        }
     </style>
 </head>
 
@@ -162,6 +206,13 @@
         <div class="banner">
             <h2>Bem-vindo ao Paulo Tech!</h2>
             <p>Explore o melhor conteúdo sobre Tecnologia,Programação e Segurança da Informação.</p>
+        </div>
+    </div>
+    <div class="content-cards">
+        <div class="card">
+            <h3>Big Data</h3>
+            <p>Descubra como grandes volumes de dados estão moldando o futuro.</p>
+            <a href="bigData.html" class="btn">Saiba Mais</a>
         </div>
     </div>
     <div class="sidebar" id="sidebar">
