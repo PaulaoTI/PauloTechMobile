@@ -76,15 +76,17 @@
         .dropdown {
             display: none;
             position: absolute;
-            left: 160px;
-            top: 5px;
+            left: 0;
+            top: 100%;
             list-style: none;
             padding: 0;
             background-color: #1b1b1b;
             border-radius: 5px;
             border: 1px solid #050505;
-            width: 90%;
+            width: 100%;
             max-width: 950px;
+            box-sizing: border-box;
+            z-index: 1; 
         }
 
         .dropdown ul {
@@ -262,21 +264,18 @@
     </h2>
     <script>
         function toggleMenu(event, selectedItem) {
-            // Previne o comportamento padrão do link
             event.preventDefault();
-    
-            // Fecha todos os dropdowns antes de abrir o selecionado
+        
             document.querySelectorAll('.dropdown').forEach(menu => {
                 menu.style.display = 'none';
             });
-    
-            // Alterna a visibilidade do dropdown selecionado
+        
             const dropdown = selectedItem.querySelector('.dropdown');
             if (dropdown) {
                 dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
             }
         }
-        // Fecha o dropdown ao clicar fora
+        
         document.addEventListener('click', (event) => {
             const isDropdown = event.target.closest('.dropdown') || event.target.closest('li');
             if (!isDropdown) {
@@ -284,7 +283,7 @@
                     menu.style.display = 'none';
                 });
             }
-        });
+        });        
     </script>    
 </body>
 
