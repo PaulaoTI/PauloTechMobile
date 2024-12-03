@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -241,13 +240,12 @@
             align-items: center;
             position: absolute;
             top: 70px;
-            left: 130px;
+            left: 100px;
             bottom: 20%;
             z-index: 3000;
         }
     </style>
 </head>
-
 <body>
     <div class="menu" id="menuToggle">
         <div class="menu-icon" id="icon">⫶☰</div>
@@ -312,33 +310,6 @@
         <hr>
         <a href="cadastro.html">Sair</a>
     </div>
-    
-    <!--
-    <div class="main-content">
-        <div class="banner">
-            <h2>Bem-vindo ao Paulo Tech!</h2>
-            <p>Explore o melhor conteúdo sobre Tecnologia, Programação e Segurança da Informação.</p>
-        </div>
-
-        <div class="content-cards">
-            <div class="card">
-                <h3>Big Data</h3>
-                <p>Descubra como grandes volumes de dados estão moldando o futuro.</p>
-                <a href="bigData.html" class="btn">Saiba Mais</a>
-            </div>
-            <div class="card">
-                <h3>Mercado de TI</h3>
-                <p>Aprenda mais e se prepare para o mercado de trabalho da area de TI.</p>
-                <a href="mercadoDeTI.html" class="btn">Saiba Mais</a>
-            </div>
-            <div class="card">
-                <h3>Data centers</h3>
-                <p>Explore a infraestrutura que suporta a tecnologia moderna e continuidade dos serviços.</p>
-                <a href="dataCenters.html" class="btn">Saiba Mais</a>
-            </div>
-        </div>
-    </div>
-  -->
     <script>
         const icon = document.getElementById('icon');
 
@@ -355,15 +326,15 @@
     <script>
         const mensagemNatal = document.getElementById('mensagem');
         const tooltip2 = document.getElementById('tooltip2');
-
-        mensagem.addEventListener('mouseenter', () => {
-            tooltip2.style.visibility = 'visible';
-            tooltip2.style.opacity = '1';
-        });
-
-        mensagem.addEventListener('mouseleave', () => {
-            tooltip2.style.visibility = 'hidden';
-            tooltip2.style.opacity = '0';
+    
+        mensagemNatal.addEventListener('click', () => {
+            if (tooltip2.style.visibility === 'visible') {
+                tooltip2.style.visibility = 'hidden';
+                tooltip2.style.opacity = '0';
+            } else {
+                tooltip2.style.visibility = 'visible';
+                tooltip2.style.opacity = '1';
+            }
         });
     </script>
     <script>
@@ -404,5 +375,4 @@
         });
     </script>
 </body>
-
 </html>
