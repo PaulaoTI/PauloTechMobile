@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/logoredonda.png" type="image/x-icon">
-    <title>Paulo Tech - Sobre nós</title>
+    <title>Paulo Tech - Sobre mim</title>
     <style>
         body {
-            background-color: rgb(121, 44, 245);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: rgb(121, 44, 245);
         }
         
-        /* Menu fixo */
         .menu {
             position: fixed;
             top: 0;
@@ -29,47 +31,58 @@
             z-index: 1000;
         }
         
-        /* Título no menu */
-        .menu .title {
+        .title {
             font-size: 25px;
             font-weight: bold;
             text-align: center;
-            margin: 0 auto;
         }
         
-        /* Estilos da seção de informações */
-        .dados {
+        /* Wrapper para controlar a ordem das seções */
+        .content-wrapper {
+            display: flex;
+            flex-direction: column-reverse; /* Troca a ordem visual */
+            align-items: center;
             margin-top: 100px;
-            max-width: 90%;
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .dados {
+            margin: 20px;
+            width: 90%;
             background-color: rgb(197, 197, 197);
-            color: rgb(0, 0, 0);
-            font-size: 15px;
+            color: black;
             padding: 20px;
             border-radius: 8px;
-            border: 2px solid rgb(197, 197, 197);
             box-shadow: 0 4px 8px rgba(252, 252, 252, 0.781);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             text-align: center;
-            margin: 20px auto;
+        }
+        
+        .mensagem {
+            margin: 20px;
+            width: 90%;
+            background-color: rgb(121, 44, 245);
+            color: black;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .mensagem h1, .mensagem p {
+            margin-bottom: 10px;
         }
         
         .dados h2 {
-            margin: 10px 0;
             font-size: 18px;
-            line-height: 1.5;
+            margin: 10px 0;
         }
         
-        /* Linha horizontal */
         hr {
             width: 100%;
             max-width: 450px;
             height: 1px;
-            border: none;
             background-color: black;
-            margin: 10px 0;
         }
+        
         
         /* Estilos da mensagem de agradecimento */
         .mensagem {
@@ -122,25 +135,22 @@
                 font-size: 12px;
             }
         }
-        
     </style>
 </head>
 <body>
     <div class="menu">
         <h2 class="title">Paulo Tech</h2>
     </div>
-
+    <div class="mensagem">
+        <h1>Estou muito feliz pela sua presença!</h1>
+        <p>O Paulo Tech é um site totalmente desenvolvido para garantir que ao sair daqui você obterá os melhores conhecimentos sobre tecnologia, essenciais para aplicá-los no seu dia a dia e nas necessidades mais relevantes.</p>
+    </div>
     <div class="dados">
         <h2>Desenvolvedor: Paulo César Martins Silva</h2><hr>
         <h2>Idade atual: 20 anos</h2><hr>
         <h2>Cidade natal: Goiânia (GO)</h2><hr>
         <h2>Cargo: Universitário TI</h2><hr>
         <h2>Instagram: <a href="https://www.instagram.com/_paulao20_/?__pwa=1" target="_blank">@_paulao20_</a></h2>
-    </div>
-
-    <div class="mensagem">
-        <h1>Estou muito feliz pela sua presença!</h1>
-        <p>O Paulo Tech é um site totalmente desenvolvido para garantir que ao sair daqui você obterá os melhores conhecimentos sobre tecnologia, essenciais para aplicá-los no seu dia a dia e nas necessidades mais relevantes.</p>
-    </div>
+    </div>    
 </body>
 </html>
