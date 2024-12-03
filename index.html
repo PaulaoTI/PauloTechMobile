@@ -154,16 +154,19 @@
 
         .content-cards {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
             margin-top: 0px;
-            position: relative; 
-            left: -340px; 
-            flex-wrap: nowrap; 
-            justify-content: flex-start; 
+            position: absolute;
+            left: 90px;
+            flex-wrap: wrap;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
-        
-        .card {
+
+        .card1,
+        .card2 {
             width: 200px;
             padding: 30px;
             background-color: rgb(34, 34, 34);
@@ -173,15 +176,18 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .card h3 {
+        .card1 h3,
+        .card2 h3 {
             margin-top: 0;
         }
 
-        .card p {
+        .card1 p,
+        .card2 p {
             font-size: 17px;
         }
 
-        .card .btn {
+        .card1 .btn,
+        .card2 .btn {
             display: inline-block;
             margin-top: 10px;
             padding: 8px 12px;
@@ -189,11 +195,12 @@
             background-color: rgb(56, 56, 56);
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
-        .card .btn:hover {
-            transform: scale(1.2, 1.2);
+        .card1 .btn:hover,
+        .card2 .btn:hover {
+            transform: scale(1.2);
             background-color: rgb(80, 80, 80);
         }
     </style>
@@ -210,12 +217,12 @@
         </div>
     </div>
     <div class="content-cards">
-        <div class="card">
+        <div class="card1">
             <h3>Big Data</h3>
             <p>Descubra como grandes volumes de dados estão moldando o futuro.</p>
             <a href="bigData.html" class="btn">Saiba Mais</a>
         </div>
-        <div class="card">
+        <div class="card2">
             <h3>Mercado de TI</h3>
             <p>Aprenda mais e se prepare para o mercado de trabalho da area de TI.</p>
             <a href="mercadoDeTI.html" class="btn">Saiba Mais</a>
@@ -254,7 +261,7 @@
         <hr>
         <a href="cadastro.html">Sair</a>
     </div>
-     <!-- 
+    <!-- 
     <div>
        
         <h1 class="presente" id="mensagem">🎁</h1>
