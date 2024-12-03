@@ -10,6 +10,8 @@
         body {
             background-color: #f5f2f2;
             overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
         }
 
         .menu {
@@ -18,6 +20,7 @@
             background-color: #202020;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             padding: 0 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             position: sticky;
@@ -40,13 +43,69 @@
 
         h1 {
             color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            position: absolute;
-            left: 500px;
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
         }
 
         .conceito {
             color: rgb(0, 0, 0);
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: 1px solid #ccc;
+        }
+
+        li {
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        /* Responsividade para telas pequenas */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .conceito {
+                font-size: 16px;
+                margin: 10px;
+            }
+
+            .menu button {
+                font-size: 14px;
+                padding: 5px 8px;
+            }
+
+            li {
+                font-size: 14px;
+            }
+        }
+
+        /* Ajustes para telas muito pequenas (smartphones) */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .conceito {
+                font-size: 14px;
+                margin: 5px;
+            }
+
+            .menu button {
+                font-size: 12px;
+                padding: 5px 6px;
+            }
+
+            li {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
