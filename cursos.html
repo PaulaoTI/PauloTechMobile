@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logoredonda.png" type="image/x-icon">
+    <title>Paulo Tech - Cursos Gratuitos</title>
+    <style>
+        body {
+            background-color: #302f2f;
+            overflow-x: hidden;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu {
+            height: 50px;
+            width: 100%;
+            background-color: #202020;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .menu h1 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .courses-grid a {
+            display: block;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .courses-grid a img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .courses-grid a:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .menu h1 {
+                font-size: 1.2rem;
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h1>Cursos Gratuitos</h1>
+    </div>
+    <h2>
+        <a href="https://www.youtube.com/c/CursoemV%C3%ADdeo/playlists" target="_blank">
+            <img src="img/cursoemvideo.png" class="cursoEmVideo" alt="">
+        </a>
+        <a href="https://www.youtube.com/@bosontreinamentos/playlists" target="_blank">
+            <img src="img/boson.jpg" class="boson" alt="">
+        </a>
+        <a href="melhoresIas.html">
+            <img class="IntArt" src="img/cursos-IA.webp" alt="">
+        </a>
+        <a href="https://www.youtube.com/playlist?list=PLAp37wMSBouDdpuuYhZfEK9oH0qk0IANb">
+            <img src="img/redes.jpg" class="redes" alt="">
+        </a>
+    </h2>
+    <h3>ola</h3>
+</body>
+</html>
