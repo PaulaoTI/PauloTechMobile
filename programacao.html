@@ -55,7 +55,6 @@
         }
 
         li a div {
-            cursor: pointer;
             height: 50px;
             width: 100%;
             max-width: 300px;
@@ -68,10 +67,10 @@
             border-radius: 5px;
             margin: 5px auto;
         }
-
+        
         li a div:hover {
             background-color: #202020;
-        }
+        }    
 
         .dropdown {
             display: none;
@@ -263,18 +262,16 @@
         </ul>
     </h2>
     <script>
-        function toggleMenu(event, selectedItem) {
+        function toggleMenu(event) {
             event.preventDefault();
-        
-            document.querySelectorAll('.dropdown').forEach(menu => {
-                menu.style.display = 'none';
-            });
-        
-            const dropdown = selectedItem.querySelector('.dropdown');
-            if (dropdown) {
-                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-            }
-        }
+          
+            // Encontrar a div pai do link clicado
+            const parentLi = event.target.closest('li');
+            const dropdown = parentLi.querySelector('.dropdown');
+          
+            // Mostrar ou ocultar o dropdown
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+          }
         
         document.addEventListener('click', (event) => {
             const isDropdown = event.target.closest('.dropdown') || event.target.closest('li');
