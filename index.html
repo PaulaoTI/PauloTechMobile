@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,25 +24,26 @@
             background-color: transparent;
             border: transparent;
         }
-        
+
         button {
-            display: block; 
+            display: block;
             background-color: rgb(66, 66, 66);
-            font-size: 17px; 
+            font-size: 17px;
             padding: 15px 10px;
-            border: none; 
+            border: none;
             border-radius: 4px;
-            color: white; 
-            cursor: pointer; 
-            width: 200px; 
-            margin-bottom: 10px; 
+            color: white;
+            cursor: pointer;
+            width: 200px;
+            margin-bottom: 10px;
             text-align: center;
-        }        
-        
+        }
+
         button:hover {
             background-color: rgb(44, 44, 44);
-            color: white; 
+            color: white;
         }
+
         a {
             text-decoration: none;
         }
@@ -59,17 +61,76 @@
             justify-content: center;
             padding: 9px;
             position: fixed;
-            left: 35%; 
+            left: 15%;
             top: 20px;
             transform: translateX(-50%);
             z-index: 2000;
         }
-        
+
         .menu:hover {
             background-color: rgb(44, 44, 44);
         }
+
         .menu-icon {
             font-size: 24px;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: -350px;
+            top: 79px;
+            height: calc(130% - 130px);
+            width: 330px;
+            background-color: rgb(66, 66, 66);
+            color: white;
+            transition: left 0.4s ease;
+            padding: 5px;
+            box-shadow: 2px 0 5px rgba(8, 8, 8, 0.699);
+            font-size: 1.2rem;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .profile-submenu {
+            display: none;
+            background-color: rgba(100, 100, 100, 0.8);
+            padding: 10px;
+            margin-top: 1px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .profile-submenu p {
+            margin: 5px 0;
+            color: white;
+            font-size: 14px;
+        }
+        .profile-submenu Button{
+            background-color: rgb(71, 71, 71);
+        }
+        .profile-submenu Button:hover{
+            background-color: rgb(37, 37, 37);
+        }
+
+        hr {
+            border: 1px solid #df0e0e;
+        }
+        .hr2 {
+            border: 1px solid #ffffff;
         }
     </style>
 </head>
@@ -78,52 +139,49 @@
     <div class="menu" id="menuToggle">
         <div class="menu-icon" id="icon">⫶☰</div>
     </div>
-    <div>
-        <a href="InteligenciaArtificial.html">
-            <button class="Bt1">Inteligência artificial</button>
-        </a>
-        <a href="informatica.html">
-            <button class="Bt2">Informática</button>
-        </a>
-        <a href="programacao.html">
-            <button class="Bt3">Programação</button>
-        </a>
-        <a href="redes.html">
-            <button class="Bt4">Redes</button>
-        </a>
-        <a href="segurancaDaInformacao.html">
-            <button class="Bt5">Seg. Info</button>
-        </a>
-        <a href="bancoDeDados.html">
-            <button class="Bt6">Banco de dados</button>
-        </a>
-        <a href="cursos.html">
-            <button class="Bt7">Cursos Gratuitos</button>
-        </a>
-        <!-- 
-        <h1 class="presente" id="mensagem">🎁</h1>
-        <div class="tooltip2" id="tooltip2">Desejo a voce um feliz natal! 🎄🎁</div>
-        -->
-    </div>
-     
-    <!--
+    
     <div class="sidebar" id="sidebar">
         <a href="" id="profileLink">Meu perfil</a>
         <div class="profile-submenu" id="profileSubmenu">
             <label>Nome</label>
             <p id="profileName"></p>
-            <hr>
+            <hr class="hr2">
             <label>Telefone</label>
             <p id="profilePhone"></p>
-            <hr>
+            <hr class="hr2">
             <label>Email</label>
             <p id="profileEmail"></p>
-            <hr>
-            <button id="editButton">Editar</button>
+            <hr class="hr2">
+            <button class="editButton" id="editButton">Editar</button>
         </div>
+        <hr>
+        <a href="InteligenciaArtificial.html">Inteligência artificial</a>
+        <hr>
+        <a href="informatica.html">Informática</a>
+        <hr>
+        <a href="programacao.html">Programação</a>
+        <hr>
+        <a href="redes.html">Redes</a>
+        <hr>
+        <a href="segurancaDaInformacao.html">Seg. Info</a>
+        <hr>
+        <a href="bancoDeDados.html">Banco de dados</a>
+        <hr>
+        <a href="cursos.html">Cursos Gratuitos</a>
+        <hr>
         <a href="sobreMim.html">Sobre nós</a>
+        <hr>
         <a href="cadastro.html">Sair</a>
     </div>
+
+    <div>
+        <!-- 
+        <h1 class="presente" id="mensagem">🎁</h1>
+        <div class="tooltip2" id="tooltip2">Desejo a voce um feliz natal! 🎄🎁</div>
+        -->
+    </div>
+    <!--
+    
     <div class="main-content">
         <div class="banner">
             <h2>Bem-vindo ao Paulo Tech!</h2>
