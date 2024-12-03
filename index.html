@@ -83,7 +83,7 @@
             background-color: rgb(66, 66, 66);
             color: white;
             transition: left 0.4s ease;
-            padding: 7px;
+            padding: 5px;
             box-shadow: 2px 0 5px rgba(8, 8, 8, 0.699);
             font-size: 1.2rem;
             overflow-y: auto;
@@ -105,7 +105,7 @@
         .sidebar a:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
-        
+
         .profile-submenu {
             display: none;
             background-color: rgba(100, 100, 100, 0.8);
@@ -120,18 +120,36 @@
             color: white;
             font-size: 14px;
         }
-        .profile-submenu Button{
+
+        .profile-submenu Button {
             background-color: rgb(71, 71, 71);
         }
-        .profile-submenu Button:hover{
+
+        .profile-submenu Button:hover {
             background-color: rgb(37, 37, 37);
         }
 
         hr {
             border: 1px solid #df0e0e;
         }
+
         .hr2 {
             border: 1px solid #ffffff;
+        }
+
+        .main-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 3px;
+            left: 450px;
+        }
+
+        .banner {
+            text-align: center;
+            color: white;
         }
     </style>
 </head>
@@ -140,7 +158,6 @@
     <div class="menu" id="menuToggle">
         <div class="menu-icon" id="icon">⫶☰</div>
     </div>
-    
     <div class="sidebar" id="sidebar">
         <a href="" id="profileLink">Meu perfil</a>
         <div class="profile-submenu" id="profileSubmenu">
@@ -174,7 +191,12 @@
         <hr>
         <a href="cadastro.html">Sair</a>
     </div>
-
+    <div class="main-content">
+        <div class="banner">
+            <h2>Bem-vindo ao Paulo Tech!</h2>
+            <p>Explore o melhor conteúdo sobre Tecnologia,<br>Programação e Segurança da Informação.</p>
+        </div>
+    </div>
     <div>
         <!-- 
         <h1 class="presente" id="mensagem">🎁</h1>
@@ -182,14 +204,6 @@
         -->
     </div>
     <!--
-    
-    <a href="bigData.html">Big Data</a>
-        <hr>
-        <a href="mercadoDeTI.html">Mercado de TI</a>
-        <hr>
-        <a href="dataCenters.html">Data centers</a>
-        <hr>
-
     <div class="main-content">
         <div class="banner">
             <h2>Bem-vindo ao Paulo Tech!</h2>
