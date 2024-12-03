@@ -88,6 +88,7 @@
             font-size: 1.2rem;
             overflow-y: auto;
             height: 630px;
+            z-index: 2000;
         }
 
         .sidebar.active {
@@ -170,7 +171,7 @@
         .card3 {
             width: 200px;
             padding: 30px;
-            background-color: rgb(34, 34, 34);
+            background-color: rgb(54, 54, 54);
             color: white;
             text-align: center;
             border-radius: 10px;
@@ -196,7 +197,7 @@
             margin-top: 10px;
             padding: 8px 12px;
             color: white;
-            background-color: rgb(56, 56, 56);
+            background-color: rgb(46, 46, 46);
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s;
@@ -207,6 +208,42 @@
         .card3 .btn:hover {
             transform: scale(1.2);
             background-color: rgb(80, 80, 80);
+        }
+
+        .presente{
+            cursor: pointer;
+            height: 40px;
+            width: 50px;
+            background-color: rgb(66, 66, 66);
+            border-radius: 5px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 9px;
+            position: fixed;
+            left: 7%;
+            top: 50px;
+            transform: translateX(-50%);
+            z-index: 2000;
+        }
+
+        .tooltip2 {
+            visibility: hidden;
+            height: 100px;
+            width: 290px;
+            background-color: rgb(66, 66, 66);
+            border-radius: 5px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 70px;
+            left: 130px;
+            bottom: 20%;
+            z-index: 3000;
         }
     </style>
 </head>
@@ -237,6 +274,10 @@
             <p>Explore a infraestrutura que suporta a tecnologia moderna e continuidade dos serviços.</p>
             <a href="dataCenters.html" class="btn">Saiba Mais</a>
         </div>
+    </div>
+    <div>
+        <h1 class="presente" id="mensagem">🎁</h1>
+        <div class="tooltip2" id="tooltip2">Desejo a voce um feliz natal 🎄🎁</div>
     </div>
     <div class="sidebar" id="sidebar">
         <a href="" id="profileLink">Meu perfil</a>
@@ -271,13 +312,7 @@
         <hr>
         <a href="cadastro.html">Sair</a>
     </div>
-    <!-- 
-    <div>
-       
-        <h1 class="presente" id="mensagem">🎁</h1>
-        <div class="tooltip2" id="tooltip2">Desejo a voce um feliz natal! 🎄🎁</div>
-        
-    </div>-->
+    
     <!--
     <div class="main-content">
         <div class="banner">
