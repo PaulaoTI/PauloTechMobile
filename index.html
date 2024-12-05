@@ -21,12 +21,6 @@
             position: relative;
         }
 
-
-        .container {
-            background-color: transparent;
-            border: transparent;
-        }
-
         button {
             display: block;
             background-color: rgb(66, 66, 66);
@@ -51,7 +45,6 @@
         }
 
         .menu {
-            cursor: pointer;
             height: 40px;
             width: 50px;
             background-color: rgb(51, 51, 51);
@@ -202,7 +195,6 @@
         }
 
         .presente {
-            cursor: pointer;
             height: 40px;
             width: 50px;
             background-color: rgb(51, 51, 51);
@@ -237,12 +229,26 @@
             bottom: 20%;
             z-index: 3000;
         }
+
+        .menu-1{
+            height: 40px;
+            width: 530px;
+            background-color: rgb(51, 51, 51);
+            padding: 9px;
+            border-radius: 5px;
+            position: fixed;
+            left: 25%;
+            top: 0px;
+            transform: translateX(-50%);  
+        }
     </style>
 </head>
 
 <body>
-    <div class="menu" id="menuToggle">
-        <div class="menu-icon" id="icon">⫶☰</div>
+    <div class="menu-1">
+        <div class="menu" id="menuToggle">
+            <div class="menu-icon" id="icon">⫶☰</div>
+        </div>
     </div>
     <div class="main-content">
         <div class="banner">
