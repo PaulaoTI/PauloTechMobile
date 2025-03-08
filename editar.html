@@ -63,11 +63,6 @@
             margin: 5px;
         }
 
-        .salvar:hover {
-            font-size: 15px;
-            transform: scale(1.2, 1.2);
-        }
-
         .cancel {
             padding: 10px 20px;
             font-size: 16px;
@@ -78,11 +73,6 @@
             border-radius: 5px;
             cursor: pointer;
             margin: 5px;
-        }
-
-        .cancel:hover {
-            font-size: 15px;
-            transform: scale(1.2, 1.2);
         }
 
         hr {
@@ -107,18 +97,14 @@
 
         .editar {
             height: 40px;
-            width: 100px;
-            background-color: rgb(49, 49, 49);
-            border: 2px solid rgb(49, 49, 49);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.685);
+            width: 40px;
             color: white;
             border-radius: 5px;
             cursor: pointer;
             font-size: 15px;
-        }
-
-        .editar:hover {
-            transform: scale(1.2, 1.2);
+            position: absolute;
+            top: 0;
+            left: 80%;
         }
 
         .menu button {
@@ -154,7 +140,8 @@
                 width: 80%;
             }
 
-            .salvar, .cancel, .editar {
+            .salvar,
+            .cancel {
                 width: 100%;
                 padding: 12px;
                 font-size: 16px;
@@ -171,7 +158,8 @@
                 padding: 15px;
             }
 
-            .salvar, .cancel, .editar {
+            .salvar,
+            .cancel {
                 width: 100%;
                 font-size: 16px;
             }
@@ -196,7 +184,7 @@
             <p id="profileEmail"></p>
             <hr>
             <div class="button">
-                <button class="editar" id="editButton">Editar</button>
+                <img class="editar" id="editButton" src="img/editar.png" alt="editar">
             </div>
             <div class="cont">
                 <div id="editForm" style="display: none;">
@@ -244,32 +232,25 @@
             editPhone.value = telefone;
             editEmail.value = email;
         });
-
+        
         saveButton.addEventListener('click', () => {
             const newName = editName.value;
             const newPhone = editPhone.value;
             const newEmail = editEmail.value;
-
+        
             localStorage.setItem('nome', newName);
             localStorage.setItem('telefone', newPhone);
             localStorage.setItem('email', newEmail);
-
+        
             profileName.textContent = `Nome: ${newName}`;
             profilePhone.textContent = `Telefone: ${newPhone}`;
             profileEmail.textContent = `E-mail: ${newEmail}`;
-
+        
             editForm.style.display = 'none';
             editButton.style.display = 'block';
-    
-            /*
-            if (editName.value == newName && editPhone.value == newPhone && editEmail.value && newEmail) {
-                alert('Nenhuma alteração foram feita.');
-                return;
-            }
-            */
-            
+        
             alert('As alterações foram salvas ✔');
-        });
+        });  
 
         cancelButton.addEventListener('click', () => {
             editForm.style.display = 'none';
