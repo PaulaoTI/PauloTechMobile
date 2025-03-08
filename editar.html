@@ -32,7 +32,6 @@
             padding: 10px;
         }
 
-
         .info {
             background-color: rgb(255, 255, 255);
             border-radius: 5px;
@@ -55,8 +54,8 @@
             padding: 10px 20px;
             font-size: 16px;
             border: none;
-            background-color: rgb(7, 255, 7);
-            border: 2px solid rgb(48, 255, 7);
+            background-color: rgb(5, 92, 253);
+            border: 2px solid rgb(5, 92, 253);
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: rgb(0, 0, 0);
             border-radius: 5px;
@@ -99,7 +98,8 @@
 
         input {
             height: 20px;
-            width: 80%;
+            width: 60%;
+            border-radius: 5px;
             border: 1px solid black;
             padding: 5px;
             margin-top: 5px;
@@ -220,7 +220,6 @@
         const telefone = localStorage.getItem('telefone') || 'Não informado';
         const email = localStorage.getItem('email') || 'Não informado';
 
-        // Exibe os dados no perfil
         const profileName = document.getElementById('profileName');
         const profilePhone = document.getElementById('profilePhone');
         const profileEmail = document.getElementById('profileEmail');
@@ -229,7 +228,6 @@
         profilePhone.textContent = `Telefone: ${telefone}`;
         profileEmail.textContent = `E-mail: ${email}`;
 
-        // Elementos do formulário de edição
         const editButton = document.getElementById('editButton');
         const editForm = document.getElementById('editForm');
         const editName = document.getElementById('editName');
@@ -238,40 +236,41 @@
         const saveButton = document.getElementById('saveButton');
         const cancelButton = document.getElementById('cancelButton');
 
-        // Mostrar formulário de edição
         editButton.addEventListener('click', () => {
             editForm.style.display = 'block';
             editButton.style.display = 'none';
 
-            // Preencher campos com os dados atuais
             editName.value = nome;
             editPhone.value = telefone;
             editEmail.value = email;
         });
 
-        // Salvar as alterações
         saveButton.addEventListener('click', () => {
             const newName = editName.value;
             const newPhone = editPhone.value;
             const newEmail = editEmail.value;
 
-            // Atualizar localStorage
             localStorage.setItem('nome', newName);
             localStorage.setItem('telefone', newPhone);
             localStorage.setItem('email', newEmail);
 
-            // Atualizar exibição no perfil
             profileName.textContent = `Nome: ${newName}`;
             profilePhone.textContent = `Telefone: ${newPhone}`;
             profileEmail.textContent = `E-mail: ${newEmail}`;
 
-            // Esconder formulário de edição
             editForm.style.display = 'none';
             editButton.style.display = 'block';
-            alert('As alterações foram salvas ✔')
+    
+            /*
+            if (editName.value == newName && editPhone.value == newPhone && editEmail.value && newEmail) {
+                alert('Nenhuma alteração foram feita.');
+                return;
+            }
+            */
+            
+            alert('As alterações foram salvas ✔');
         });
 
-        // Cancelar edição
         cancelButton.addEventListener('click', () => {
             editForm.style.display = 'none';
             editButton.style.display = 'block';
